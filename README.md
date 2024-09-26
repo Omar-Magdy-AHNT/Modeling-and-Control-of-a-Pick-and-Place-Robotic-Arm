@@ -1,6 +1,6 @@
 # Robotics_Project_Team10
 ### MileStone 1
-- [Literature Review](/“Team10_Milestone%2001/Literature%20Review%20ROBOTICS.pdf)
+- [Literature Review](/“Team10_Milestone%2001/Literature%20Review%20ROBOTICS.docx)
 - [Robotic Arm Designs](/“Team10_Milestone%2001/Robotic%20Arms/)
 - [Verification Video](/“Team10_Milestone%2001/Video.rar)
 ### MileStone 2
