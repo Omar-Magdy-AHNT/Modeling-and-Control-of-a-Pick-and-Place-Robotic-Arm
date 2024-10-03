@@ -3,6 +3,7 @@
 - [Literature Review](/“Team10_Milestone%2001/Literature%20Review%20ROBOTICS.docx)
 - [Robotic Arm Designs](/“Team10_Milestone%2001/Robotic%20Arms/)
 - [Verification Video](/“Team10_Milestone%2001/Video.rar)
+- [Papers links](/“Team10_Milestone%2001/Papers.txt)
 - Because of Late Template update on the cms this is the [Literature Review in Template format](/“Team10_Milestone%2001/Lit%20review%20in%20template%20format.docx)
 ### MileStone 2
 -
