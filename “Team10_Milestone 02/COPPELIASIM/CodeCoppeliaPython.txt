@@ -1,0 +1,44 @@
+def sysCall_init():
+    sim = require('sim')
+    
+    # Define the object handles for each joint
+    self.objectHandles = []
+    for i in range(1, 5):  # Assuming joints are named q1, q2, q3, q4
+        self.objectHandles.append(sim.getObject("../q{}".format(i)))
+    
+    # Define target positions for each joint
+    self.targetPositions = [0*(3.14/180), 45*(3.14/180), -90*(3.14/180), 90*(3.14/180)]
+    
+    # Define the time durations for each joint to reach the target position
+    self.durations = [10, 8, 12, 6]  # Time in seconds for each joint
+    
+    # Store start times for each joint
+    self.startTimes = [sim.getSimulationTime()] * len(self.objectHandles)
+
+def sysCall_actuation():
+    sim = require('sim')
+    tnow = sim.getSimulationTime()
+    
+    # Loop through all joints and move them simultaneously
+    for i, objectHandle in enumerate(self.objectHandles):
+        elapsedTime = tnow - self.startTimes[i]  # Time elapsed for this joint
+        duration = self.durations[i]  # Duration for this joint
+        
+        if elapsedTime < duration:
+            # Calculate the new position based on elapsed time and target position
+            newpos = (elapsedTime / duration) * self.targetPositions[i]
+            sim.setJointTargetPosition(objectHandle, newpos)
+        else:
+            # Set the joint to its final target position
+            sim.setJointTargetPosition(objectHandle, self.targetPositions[i])
+    pass
+
+def sysCall_sensing():
+    # put your sensing code here
+    pass
+
+def sysCall_cleanup():
+    EEF_handle = sim.getObject("../EEF")
+    base_handle = sim.getObject("../Z1Frame")
+    eefpos = sim.getObjectPosition(EEF_handle, base_handle)
+    print(eefpos)
