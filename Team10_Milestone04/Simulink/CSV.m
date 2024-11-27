@@ -1,1 +1,0 @@
-csvwrite('Full_Traj_Matrix',angles_matrix)
