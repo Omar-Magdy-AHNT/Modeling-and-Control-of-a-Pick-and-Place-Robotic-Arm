@@ -1,6 +1,6 @@
 import numpy as np
 
-from Functions import DHT
+from Functions import DH_Table as DHT
 
 def joint_traj(q0, qf, qdot0, qdotf, Tf, Ts, EEF_Pos_and_DH):
 
