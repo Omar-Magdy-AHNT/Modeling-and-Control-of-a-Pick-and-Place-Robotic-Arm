@@ -18,6 +18,6 @@ For a detailed explanation of the methodology, simulations, and results, please 
 - [Real life implementation](/Arduino/Arduino.m)
 
 ### Video Preview 
-[![Download the Video](/Media/)](/Media/)
+[![Download the Video](/Media/Simulation.png)](/Media/Simulation.mp4)
 
 
